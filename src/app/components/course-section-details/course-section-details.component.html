@@ -1,13 +1,13 @@
 <div *ngIf="viewMode">
   <div *ngIf="currentCourseSection.personal_website_link">
-    <h4>Course Section</h4>
+    <h4>Researcher Info</h4>
     <div>
-      <label><strong>Course ID:</strong></label> {{ currentCourseSection.personal_website_link }}
+      <label><strong>Personal Webpage:</strong></label> {{ currentCourseSection.personal_website_link }}
     </div>
     <div>
-      <label><strong>Course Name:</strong></label> {{ currentCourseSection.google_scholar_link }}
+      <label><strong>Google Scholar:</strong></label> {{ currentCourseSection.google_scholar_link }}
     </div>
-    <div>
+    <!-- <div>
       <label><strong>UUID:</strong></label> {{ currentCourseSection.uuid }}
     </div>
     <div>
@@ -30,13 +30,13 @@
     </div>
     <div>
       <label><strong>Semester:</strong></label> {{ currentCourseSection.semester }}
-    </div>
+    </div> -->
     <a class="badge badge-warning" [routerLink]="'/course-sections/' + currentCourseSection.personal_website_link">
       Edit
     </a>
   </div>
   <div *ngIf="!currentCourseSection.course_id">
-    <p>Please click on a paper</p>
+    <p>Please click somewhere else</p>
   </div>
 </div>
 <div *ngIf="!viewMode">
